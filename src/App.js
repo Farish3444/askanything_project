@@ -7,6 +7,7 @@ import './App.css';
 import NavComp from './NavBar/NavComp';
 import Advertise from './NavBar/Advertise';
 import Home from './LandingPage/Home';
+import ContactUs from './NavBar/ContactUs';
 /////////////////
 
 
@@ -18,6 +19,7 @@ function App() {
       <BrowserRouter>
       <NavComp />
       <Switch>
+        <Route path="/ContactUs" component={ContactUs}/>
         <Route  path="/Advertise"  component={Advertise}/>
         <Route path="/" component={Home}/>
       </Switch>

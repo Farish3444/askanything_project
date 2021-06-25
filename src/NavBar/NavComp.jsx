@@ -30,13 +30,10 @@ const NavComp = () => {
       <Nav.Link > Free Listing |</Nav.Link>
       <Nav.Link onClick={()=>history.push('/Advertise')}> Advertise |</Nav.Link>
       <Nav.Link> Customer / Business. |</Nav.Link>
-      <Nav.Link> Contact Us |</Nav.Link>
+      <Nav.Link onClick={()=>history.push('/ContactUs')}> Contact Us |</Nav.Link>
       <NavDropdown title="Languages" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">English</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">தமிழ்</NavDropdown.Item>
-        
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown>
     </Nav>
     {/* Nav items and Routed lists */}
