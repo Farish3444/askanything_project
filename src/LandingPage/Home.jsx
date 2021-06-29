@@ -4,14 +4,14 @@ import { Form } from 'react-bootstrap';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import Contactimage from '../assets/contactus.jpeg';
+import ReuseCards from '../ReUsableComps/ReuseCards';
 
 const Home = () => {
 
 
   const serviceData = [
     {service:"Doctor&Pharmacy",types:'Cardiologist,dentist,Skincare'},
-    {service:"Restaurant",types:'FastFood,IndianFood,WesternFood'},
-    {service:"Store",types:'ShoppingMall,DepartmentStores'} 
+  
   ];
 
 
@@ -42,9 +42,9 @@ const Home = () => {
 <ToggleButtonGroupControlled/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-
+<div>
   {serviceData.map((datacard) => (
-    <div className="card" style={{width: "15rem",margin:'5%',display:'inline-flex'}}>
+    <div className="card" style={{width: "17rem",margin:'5%',display:'inline-flex'}}>
     <div key={datacard.services}>
   <img class="card-img-top" src={Contactimage} alt="Card image cap"/>
   <div class="card-body">
@@ -55,6 +55,14 @@ const Home = () => {
   </div>
 </div>
   ))}    
+
+  <ReuseCards 
+    src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFjYm9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
+    service={'Apple Products'}
+    types={'Imac,MacBook,iPad,IPhone'}
+    style={{marginTop:'1%',marginLeft:'40%',width: "17rem"}}
+  />
+</div>
         </React.Fragment>
     )
 }
