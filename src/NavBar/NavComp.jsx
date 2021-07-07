@@ -41,7 +41,9 @@ const NavComp = () => {
 
 
     <Form inline>
+    <Link to="/SignUp">
       <Button variant="outline-success">Login/Sign-up</Button>
+    </Link>
     </Form>
   </Navbar.Collapse>
 </Navbar>

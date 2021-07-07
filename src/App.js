@@ -8,6 +8,7 @@ import NavComp from './NavBar/NavComp';
 import Advertise from './NavBar/Advertise';
 import Home from './LandingPage/Home';
 import ContactUs from './NavBar/ContactUs';
+import SignUpop from "./SignUp/SignUpop";
 /////////////////
 
 
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
       <NavComp />
       <Switch>
+      <Route path="/SignUp" component={SignUpop}/>
         <Route path="/ContactUs" component={ContactUs}/>
         <Route  path="/Advertise"  component={Advertise}/>
         <Route path="/" component={Home}/>
