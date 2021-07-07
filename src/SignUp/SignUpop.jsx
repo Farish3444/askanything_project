@@ -13,7 +13,7 @@ const [state, setState] = useState({
 });
 const [submit, setSubmit] = useState(false);
 const [valid, setvalid] = useState(false);
-const [passValid, setpassValid] = useState(false);
+
 
 const validateForm=(e)=>{
     e.preventDefault();
@@ -22,7 +22,6 @@ const validateForm=(e)=>{
         console.log(state);
     }
     setSubmit(true)
-    setpassValid(true)
 }
 
 const handleFirst=(e)=>{
@@ -38,6 +37,7 @@ const handlePassword=(e)=>{
 const handleReset=(e)=>{
     setState({...state,resetPassword:e.target.value})
 }
+
     return (
         <div className="inputs">
             <form>
@@ -78,7 +78,7 @@ const handleReset=(e)=>{
                 {submit && handlePassword !== handleReset ? <p>Invalid Password</p>:null}
                 {/* {setpassValid(true)} */}
                 <br/>
-                {submit && valid && passValid ? <p style={{color:'green'}}>successfully added</p>:null}
+                {submit && valid  ? <p style={{color:'green'}}>successfully added</p>:null}
                 <br/>
                 <br/>
                 <Button 

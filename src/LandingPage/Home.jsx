@@ -43,28 +43,34 @@ const Home = () => {
 <ToggleButtonGroupControlled/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+<div style={{marginTop:'5%',marginRight:'10rem'}}>
 
 
+<div>
   <ReuseCards 
     src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFjYm9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
     service={'Apple Products'}
     types={'Imac,MacBook,iPad,IPhone'}
-    style={{marginTop:'1%',marginLeft:'40%',width: "17rem"}}
+    style={{marginTop:'1%',marginLeft:'20%',width: "17rem"}}
   />
+</div>
 
+<div>
   <ReuseCards 
     src={hospitalLogo}
     service={'Best Doctors'}
     types={'Cardio,Dentist,Neurologist'}
-    style={{marginTop:'1%',marginLeft:'60%',width: "17rem"}}
+    style={{marginTop:'-33%',marginLeft:'47%',width: "17rem",height:'23.1rem'}}
   />
+</div>
 
   <ReuseCards 
     src={foodLogo}
     service={'Best Street Foods'}
     types={'snack,drinks,chart-items'}
-    style={{marginTop:'1%',marginLeft:'60%',width: "17rem"}}
+    style={{marginTop:'-33%',marginLeft:'73%',width: "17rem",height:'23.1rem'}}
   />
+ </div>
 
       </React.Fragment>
     )

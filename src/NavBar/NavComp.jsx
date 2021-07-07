@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route,Link,NavLink,useHistory, BrowserRouter } from "react-router-dom";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem,Form,FormControl,Button} from 'react-bootstrap';
 import './NavComp.css';
-import './Advertise';
+import '../Advertise/Advertise';
 
 const NavComp = () => {
 

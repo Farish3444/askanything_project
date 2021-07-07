@@ -5,10 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/Logo.png';
 import './App.css';
 import NavComp from './NavBar/NavComp';
-import Advertise from './NavBar/Advertise';
+import Advertise from './Advertise/Advertise';
 import Home from './LandingPage/Home';
 import ContactUs from './NavBar/ContactUs';
 import SignUpop from "./SignUp/SignUpop";
+
 /////////////////
 
 
