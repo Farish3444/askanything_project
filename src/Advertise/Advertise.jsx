@@ -12,6 +12,7 @@ const Advertise=()=>{
 
     return(
 <React.Fragment>
+<h1>Best Plans For You</h1>
         <Link to="/Payment">
         <PricingTable  highlightColor='#000080'> 
     <PricingSlot  buttonText='TRY IT FREE' title='FREE TRIAL' priceText='₹0/month'>
