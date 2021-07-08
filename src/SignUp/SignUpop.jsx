@@ -61,6 +61,7 @@ const handleReset=(e)=>{
                 <br/>
                 <TextField 
                     label='Enter Password'
+                    type='password'
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.Password}
@@ -70,6 +71,7 @@ const handleReset=(e)=>{
                 <br/>
                 <TextField 
                     label='ReEnter Password'
+                    type='password'
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}} 
                     value={state.resetPassword}

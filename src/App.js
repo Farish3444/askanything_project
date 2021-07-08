@@ -9,6 +9,7 @@ import Advertise from './Advertise/Advertise';
 import Home from './LandingPage/Home';
 import ContactUs from './NavBar/ContactUs';
 import SignUpop from "./SignUp/SignUpop";
+import Payment from "./Advertise/Payment";
 
 /////////////////
 
@@ -21,10 +22,11 @@ function App() {
       <BrowserRouter>
       <NavComp />
       <Switch>
+      <Route exact path="/Payment" component={Payment} />
       <Route path="/SignUp" component={SignUpop}/>
         <Route path="/ContactUs" component={ContactUs}/>
         <Route  path="/Advertise"  component={Advertise}/>
-        <Route path="/" component={Home}/>
+        <Route path="/" exact component={Home}/>
       </Switch>
       </BrowserRouter>
     </React.Fragment>
