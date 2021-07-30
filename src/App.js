@@ -10,7 +10,7 @@ import Home from './LandingPage/Home';
 import ContactUs from './NavBar/ContactUs';
 import SignUpop from "./SignUp/SignUpop";
 import Payment from "./Advertise/Payment";
-
+import CustomerReview from "./CustomerReview/CustomerReview";
 /////////////////
 
 
@@ -22,6 +22,7 @@ function App() {
       <BrowserRouter>
       <NavComp />
       <Switch>
+      <Route path="/Customer-Review" component={CustomerReview}/>
       <Route exact path="/Payment" component={Payment} />
       <Route path="/SignUp" component={SignUpop}/>
         <Route path="/ContactUs" component={ContactUs}/>

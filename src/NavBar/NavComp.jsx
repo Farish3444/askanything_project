@@ -29,7 +29,7 @@ const NavComp = () => {
      
       <Nav.Link > Free Listing |</Nav.Link>
       <Nav.Link onClick={()=>history.push('/Advertise')}> Advertise with Us |</Nav.Link>
-      <Nav.Link> Customer / Business. |</Nav.Link>
+      <Nav.Link onClick={()=>history.push('/Customer-Review')}> Customer / Business. |</Nav.Link>
       <Nav.Link onClick={()=>history.push('/ContactUs')}> Contact Us |</Nav.Link>
       <NavDropdown title="Languages" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">English</NavDropdown.Item>
