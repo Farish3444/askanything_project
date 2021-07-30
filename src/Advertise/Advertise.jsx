@@ -8,9 +8,11 @@ import Payment from './Payment';
 
 const Advertise=()=>{
 
-    const history = useHistory();
+const history = useHistory();
 
-    return(
+
+return(
+    
 <React.Fragment>
 <h1>Best Plans For You</h1>
         <Link to="/Payment">

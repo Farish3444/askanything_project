@@ -6,9 +6,9 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import hospitalLogo from '../assets/hospital.jpeg';
 import ReuseCards from '../ReUsableComps/ReuseCards';
 import foodLogo from '../assets/foodLogo.jpeg';
+import imac from '../assets/imac.png';
 
 const Home = () => {
-
 
   const serviceData = [
     {service:"Doctor&Pharmacy",types:'Cardiologist,dentist,Skincare'},
@@ -24,12 +24,13 @@ const Home = () => {
         return (
           <ToggleButtonGroup type="checkbox"  value={value} onChange={handleChange} style={{width:'50%'}} >
             <ToggleButton value={1} variant="outline-success">Services</ToggleButton>
+            &emsp;
             <ToggleButton value={2} variant="outline-success" >Offers</ToggleButton>
+            &emsp;
             <ToggleButton value={3} variant="outline-success" >Community</ToggleButton>
           </ToggleButtonGroup>
         );
       }
-
 
     return (
         <React.Fragment>
@@ -40,7 +41,7 @@ const Home = () => {
   </Form.Group>
   </Form>
   <br/>
-<ToggleButtonGroupControlled/>
+<ToggleButtonGroupControlled />
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 <div style={{marginTop:'5%',marginRight:'10rem'}}>
@@ -48,10 +49,10 @@ const Home = () => {
 
 <div>
   <ReuseCards 
-    src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFjYm9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80'
+    src={imac}
     service={'Apple Products'}
     types={'Imac,MacBook,iPad,IPhone'}
-    style={{marginTop:'1%',marginLeft:'20%',width: "17rem"}}
+    style={{marginTop:'3%',marginLeft:'20%',width: "17rem",height:'23rem'}}
   />
 </div>
 
