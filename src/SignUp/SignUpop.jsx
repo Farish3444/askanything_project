@@ -24,12 +24,12 @@ const validateForm=(e)=>{
     setSubmit(true)
 }
 
-const handleFirst=(e)=>{
-      setState({...state,FirstName:e.target.value})
-}
-const handleLast=(e)=>{
-      setState({...state,LastName:e.target.value})
-}
+// const handleFirst=(e)=>{
+//       setState({...state,FirstName:e.target.value})
+// }
+// const handleLast=(e)=>{
+//       setState({...state,LastName:e.target.value})
+// }
 const handlePassword=(e)=>{
       setState({...state,Password:e.target.value})
 }
@@ -38,46 +38,59 @@ const handleReset=(e)=>{
     setState({...state,resetPassword:e.target.value})
 }
 
+const handleChange=(e)=> {
+    const value = e.target.value;
+    setState({
+      ...state,
+      [e.target.name]: value
+    });
+  }
+
+
     return (
         <div className="inputs">
             <form>
                 <TextField 
                     label='Enter Firstname'
+                    name='FirstName'
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.FirstName}
-                    onChange={handleFirst} 
+                    onChange={handleChange} 
                 />
                 {submit && !state.FirstName ? (<p>Field required</p>):(null)}
                 <br/>
                 <TextField 
                     label='Enter Last Name'
+                    name="LastName"
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.LastName}
-                    onChange={handleLast} 
+                    onChange={handleChange} 
                 />
                 {submit && !state.LastName ? (<p>Field required</p>):null}
                 <br/>
                 <TextField 
                     label='Enter Password'
                     type='password'
+                    name="Password"
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.Password}
-                    onChange={handlePassword} 
+                    onChange={handleChange} 
                 />
                 {submit && !state.Password ? (<p>Field required</p>):null}
                 <br/>
                 <TextField 
                     label='ReEnter Password'
                     type='password'
+                    name="resetPassword"
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}} 
                     value={state.resetPassword}
-                    onChange={handleReset}
+                    onChange={handleChange}
                 />
-                {submit && handlePassword !== handleReset ? <p>Invalid Password</p>:null}
+                {submit && handlePassword === handleReset ? <p>Invalid Password</p>:null}
                 {/* {setpassValid(true)} */}
                 <br/>
                 {submit && valid  ? <p style={{color:'green'}}>successfully added</p>:null}
