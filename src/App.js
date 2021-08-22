@@ -13,7 +13,6 @@ import Payment from "./Advertise/Payment";
 import CustomerReview from "./CustomerReview/CustomerReview";
 /////////////////
 
-
 function App() {
   return (
     <div className="App">
