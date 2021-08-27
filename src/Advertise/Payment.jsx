@@ -103,7 +103,7 @@ const validateForm=(e)=>{
                 {submit && !form.cardHolderName ? (errormsg):null}
                 {/*  */}
             <Button variant='contained' color="primary" onClick={validateForm}>Submit</Button>
-                {submit && valid  ? <p style={{color:'green'}}>Process is Loading successfully...Please wait</p>:null}                
+                {submit && valid  ? <p style={{color:'green'}}>Process is Loading successfully...Please wait for push</p>:null}                
             </form>
         </div>
     )
