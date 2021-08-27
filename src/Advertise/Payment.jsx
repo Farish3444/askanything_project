@@ -14,7 +14,7 @@ const Payment = () => {
 
 const [submit, setSubmit] = useState(false)
 const [valid, setvalid] = useState(false)
-const errormsg = (<p style={{color:'red',marginTop:'0%' }}>Invalid Input</p>)
+const errormsg = (<p style={{color:'red'}}>Invalid Input</p>)
 
 const handleCardNumber=(e)=>{
     setform({...form,cardNumber:e.target.value})
