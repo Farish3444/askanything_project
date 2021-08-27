@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import {TextField,Button} from '@material-ui/core';
+import { getByTitle } from '@testing-library/react';
 
 
 
@@ -15,6 +16,7 @@ const Payment = () => {
 const [submit, setSubmit] = useState(false)
 const [valid, setvalid] = useState(false)
 const errormsg = (<p style={{color:'red'}}>Invalid Input</p>)
+const [paymentsuccess, setPaymentsuccess] = useState(false)
 
 const handleCardNumber=(e)=>{
     setform({...form,cardNumber:e.target.value})
@@ -39,7 +41,12 @@ const validateForm=(e)=>{
         }
         setSubmit(true)
         console.log(form)
+        setPaymentsuccess(true)
     }
+
+    useEffect(()=>{
+        document.title = `Payment successful`
+    },[])
 
     return (
         <div style={{margin:'3%'}}>
@@ -57,7 +64,6 @@ const validateForm=(e)=>{
                   value={form.cardNumber}
                   onChange={handleCardNumber}
                 />
-
                 &emsp;
                 &emsp;
                 {submit && !form.cardNumber ? (errormsg):null}
@@ -97,7 +103,7 @@ const validateForm=(e)=>{
                 {submit && !form.cardHolderName ? (errormsg):null}
                 {/*  */}
             <Button variant='contained' color="primary" onClick={validateForm}>Submit</Button>
-                {submit && valid  ? <p style={{color:'green'}}>Process is Loading successfully....Please wait</p>:null} 
+                {submit && valid  ? <p style={{color:'green'}}>Process is Loading successfully...Please wait</p>:null}                
             </form>
         </div>
     )
