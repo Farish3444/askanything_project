@@ -13,7 +13,7 @@ const Payment = () => {
     cvv:""
 })
 
-const [submit, setSubmit] = useState(false)
+const [submit, setSubmit] = useState(false);
 const [valid, setvalid] = useState(false)
 const errormsg = (<p style={{color:'red'}}>Invalid Input</p>)
 const [paymentsuccess, setPaymentsuccess] = useState(false)
