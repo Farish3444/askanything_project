@@ -11,6 +11,7 @@ import ContactUs from './NavBar/ContactUs';
 import SignUpop from "./SignUp/SignUpop";
 import Payment from "./Advertise/Payment";
 import CustomerReview from "./CustomerReview/CustomerReview";
+import FreeListing from "./FreeListing/FreeListing";
 /////////////////
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <NavComp />
       <Switch>
       <Route path="/Customer-Review" component={CustomerReview}/>
+      <Route path="/FreeListing" component={FreeListing}/>
       <Route exact path="/Payment" component={Payment} />
       <Route path="/SignUp" component={SignUpop}/>
         <Route path="/ContactUs" component={ContactUs}/>

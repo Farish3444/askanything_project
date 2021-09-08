@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route,Link,NavLink,useHistory, Browser
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem,Form,FormControl,Button} from 'react-bootstrap';
 import './NavComp.css';
 import '../Advertise/Advertise';
+import '../FreeListing/FreeListing';
 
 const NavComp = () => {
 
@@ -27,7 +28,7 @@ const NavComp = () => {
       Home |
       </Nav.Link>
      
-      <Nav.Link > Free Listing |</Nav.Link>
+      <Nav.Link onClick={()=>history.push('/FreeListing')}> Free Listing |</Nav.Link>
       <Nav.Link onClick={()=>history.push('/Advertise')}> Advertise with Us |</Nav.Link>
       <Nav.Link onClick={()=>history.push('/Customer-Review')}> Customer / Business. |</Nav.Link>
       <Nav.Link onClick={()=>history.push('/ContactUs')}> Contact Us |</Nav.Link>

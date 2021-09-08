@@ -36,7 +36,13 @@ const CustomerReview = () => {
           }
         />
         <br/>
-        <Button variant="contained" color="primary" size="small" className={classes.Button}>Submit Review</Button>
+        <Button 
+        variant="contained" 
+        color="primary" 
+        size="small" 
+        className={classes.Button}>
+        Submit Review
+        </Button>
 </FormControl>
         </div>
     )
