@@ -44,8 +44,8 @@ const Home = () => {
 <ToggleButtonGroupControlled />
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<div style={{marginTop:'5%',marginRight:'10rem'}}>
 
+<div style={{marginTop:'5%',marginRight:'10rem'}}>
 
 <div>
   <ReuseCards 
