@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     media: {
       height: 200,
     },
+    
   });
 
 const FreeListingCards = ({image,title,heading,caption}) => {

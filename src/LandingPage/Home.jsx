@@ -37,7 +37,7 @@ const Home = () => {
           <Form style={{width:'50%',marginLeft:'25%'}}>
   <Form.Group controlId="formBasicEmail">
   <br/>
-    <Form.Control type="email" placeholder="Ask Anything  🔍 " style={{textAlign:'center'}} />
+    <Form.Control type="text" placeholder="Ask Anything  🔍 " style={{textAlign:'center'}} />
   </Form.Group>
   </Form>
   <br/>
