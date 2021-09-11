@@ -17,11 +17,15 @@ const [valid, setvalid] = useState(false);
 
 const validateForm=(e)=>{
     e.preventDefault();
-    if (state.FirstName && state.LastName && state.Password){
+    if (state.FirstName && state.LastName && state.Password && state.resetPassword){
         setvalid(true)
         console.log(state);
+        setSubmit(true)
     }
-    setSubmit(true)
+    console.log("submit",submit)
+    console.log("valid",valid)
+    console.log("done")
+
 }
 
 // const handleFirst=(e)=>{
@@ -45,7 +49,7 @@ const handleChange=(e)=> {
       [e.target.name]: value
     });
   }
-
+console.log(state.resetPassword,state.Password)
 
     return (
         <div className="inputs">
@@ -90,8 +94,8 @@ const handleChange=(e)=> {
                     value={state.resetPassword}
                     onChange={handleChange}
                 />
-                {submit && handlePassword === handleReset ? <p>Invalid Password</p>:null}
-                {/* {setpassValid(true)} */}
+                {submit && state.Password !== state.resetPassword  ? <p>Invalid Password</p>:null}    
+
                 <br/>
                 {submit && valid  ? <p style={{color:'green'}}>successfully added</p>:null}
                 <br/>

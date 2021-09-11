@@ -17,7 +17,8 @@ const [submit, setSubmit] = useState(false);
 const [valid, setvalid] = useState(false)
 const errormsg = (<p style={{color:'red'}}>Invalid Input</p>)
 const [paymentsuccess, setPaymentsuccess] = useState(false)
-
+const [payment,setPayment] = useState(false)
+const [done,setDone] = useState(true)
 const handleCardNumber=(e)=>{
     setform({...form,cardNumber:e.target.value})
 }
@@ -42,11 +43,18 @@ const validateForm=(e)=>{
         setSubmit(true)
         console.log(form)
         setPaymentsuccess(true)
+
+        setTimeout(()=>{
+            setPayment(true)
+            setDone(false)
+        },3000)
     }
 
     useEffect(()=>{
         document.title = `Payment successful`
     },[])
+
+
 
     return (
         <div style={{margin:'3%'}}>
@@ -103,7 +111,8 @@ const validateForm=(e)=>{
                 {submit && !form.cardHolderName ? (errormsg):null}
                 {/*  */}
             <Button variant='contained' color="primary" onClick={validateForm}>Submit</Button>
-                {submit && valid  ? <p style={{color:'green'}}>Process is Loading successfully...Please wait for push</p>:null}                
+                {submit && valid && done  ? <p style={{color:'green'}}>Process is Loading successfully...Please wait for push</p>:null}                
+                {payment ? <p>successful payment</p> : null}
             </form>
         </div>
     )
