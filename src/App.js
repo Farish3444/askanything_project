@@ -12,6 +12,7 @@ import SignUpop from "./SignUp/SignUpop";
 import Payment from "./Advertise/Payment";
 import CustomerReview from "./CustomerReview/CustomerReview";
 import FreeListing from "./FreeListing/FreeListing";
+import SignUpop2 from "./SignUp/SignUpop2";
 /////////////////
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path="/FreeListing" component={FreeListing}/>
       <Route exact path="/Payment" component={Payment} />
       <Route path="/SignUp" component={SignUpop}/>
+      <Route path="/SignUp2" component={SignUpop2}/>
         <Route path="/ContactUs" component={ContactUs}/>
         <Route  path="/Advertise"  component={Advertise}/>
         <Route path="/" exact component={Home}/>

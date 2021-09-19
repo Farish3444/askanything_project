@@ -42,7 +42,7 @@ const NavComp = () => {
 
 
     <Form inline>
-    <Link to="/SignUp">
+    <Link to="/SignUp2">
       <Button variant="outline-success">Login/Sign-up</Button>
     </Link>
     </Form>

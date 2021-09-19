@@ -3,6 +3,7 @@ import { TextField,Button,Link } from '@material-ui/core';
 import './SignUpop.css';
 
 
+
 const SignUpop = () => {
 
 const [state, setState] = useState({
@@ -13,34 +14,26 @@ const [state, setState] = useState({
 });
 const [submit, setSubmit] = useState(false);
 const [valid, setvalid] = useState(false);
-
+const [errormsg, seterrormsg] = useState(<p>Invalid Entry</p>)
 
 const validateForm=(e)=>{
     e.preventDefault();
-    if (state.FirstName && state.LastName && state.Password && state.resetPassword){
-        setvalid(true)
-        console.log(state);
-        setSubmit(true)
+
+    if (!state.FirstName && !state.LastName && !state.Password && !state.resetPassword){
+        setSubmit(false)
+        console.log('Submit Falsy')    
     }
-    console.log("submit",submit)
-    console.log("valid",valid)
-    console.log("done")
+
+
+    if (state.FirstName && state.LastName && state.Password && state.resetPassword){
+        setSubmit(true)
+        console.log(state);
+        setvalid(true);
+    }
+
 
 }
 
-// const handleFirst=(e)=>{
-//       setState({...state,FirstName:e.target.value})
-// }
-// const handleLast=(e)=>{
-//       setState({...state,LastName:e.target.value})
-// }
-const handlePassword=(e)=>{
-      setState({...state,Password:e.target.value})
-}
-
-const handleReset=(e)=>{
-    setState({...state,resetPassword:e.target.value})
-}
 
 const handleChange=(e)=> {
     const value = e.target.value;
@@ -60,7 +53,8 @@ console.log(state.resetPassword,state.Password)
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.FirstName}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    error={submit && !state.FirstName}
                 />
                 {submit && !state.FirstName ? (<p>Field required</p>):(null)}
                 <br/>
@@ -70,7 +64,8 @@ console.log(state.resetPassword,state.Password)
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.LastName}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    error={submit && !state.LastName} 
                 />
                 {submit && !state.LastName ? (<p>Field required</p>):null}
                 <br/>
@@ -81,7 +76,8 @@ console.log(state.resetPassword,state.Password)
                     variant='outlined'
                     style={{margin:'1%',width:'30%'}}
                     value={state.Password}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    error={submit && !state.Password} 
                 />
                 {submit && !state.Password ? (<p>Field required</p>):null}
                 <br/>
@@ -93,21 +89,22 @@ console.log(state.resetPassword,state.Password)
                     style={{margin:'1%',width:'30%'}} 
                     value={state.resetPassword}
                     onChange={handleChange}
+                    error={submit && state.Password !== state.resetPassword}
                 />
                 {submit && state.Password !== state.resetPassword  ? <p>Invalid Password</p>:null}    
 
                 <br/>
-                {submit && valid  ? <p style={{color:'green'}}>successfully added</p>:null}
-                <br/>
-                <br/>
+               
                 <Button 
                 variant='contained' 
                 color='primary'
                 style={{width:'10%'}}
                 onClick={validateForm} 
                 >Submit</Button>
+               
+                {submit && valid  ? <p style={{color:'green'}}>successfully added</p>:null}
                 <br/>
-                <br/>
+                
                 <Link variant="body2" style={{cursor:'pointer'}}>
                     Existing Users Login Here
                 </Link>

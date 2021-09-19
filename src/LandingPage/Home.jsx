@@ -7,6 +7,7 @@ import hospitalLogo from '../assets/hospital.jpeg';
 import ReuseCards from '../ReUsableComps/ReuseCards';
 import foodLogo from '../assets/foodLogo.jpeg';
 import imac from '../assets/imac.png';
+import '../App.css';
 
 const Home = () => {
 
@@ -45,25 +46,24 @@ const Home = () => {
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
-<div style={{marginTop:'5%',marginRight:'10rem'}}>
+<div style={{marginTop:'5%',marginRight:'10rem'}} className='HomeCards'>
 
-<div>
   <ReuseCards 
     src={imac}
     service={'Apple Products'}
     types={'Imac,MacBook,iPad,IPhone'}
     style={{marginTop:'3%',marginLeft:'20%',width: "17rem",height:'23rem'}}
   />
-</div>
 
-<div>
+
+
   <ReuseCards 
     src={hospitalLogo}
     service={'Best Doctors'}
     types={'Cardio,Dentist,Neurologist'}
     style={{marginTop:'-33%',marginLeft:'47%',width: "17rem",height:'23.1rem'}}
   />
-</div>
+
 
   <ReuseCards 
     src={foodLogo}
