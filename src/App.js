@@ -15,7 +15,7 @@ import FreeListing from "./FreeListing/FreeListing";
 import SignUpop2 from "./SignUp/SignUpop2";
 import ProtectedRoute from "./LoginUser/ProtectedRoute";
 import LoginUser from "./LoginUser/LoginUser";
-/////////////////
+
 
 function App() {
   return (
