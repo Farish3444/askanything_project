@@ -1,11 +1,9 @@
-import React from 'react';
 import { TextField,makeStyles,theme,Button } from '@material-ui/core'
 import { useFormik,Formik,Form,ErrorMessage,Field } from 'formik';
 import * as Yup from 'yup'
-import '../App.css';
 
 
-const initialValues = {
+const initialValues ={
     firstName:'',
     lastName:'',
     email:'',
@@ -29,10 +27,12 @@ const useStyles = makeStyles({
         margin:"1ch",
         width:'25ch'
     },
-   
+    errormessage:{
+      
+    }
 })
 
-const SignUpop2 = () => {
+const LoginUser = () => {
 
     const classes = useStyles();
 
@@ -44,40 +44,17 @@ const SignUpop2 = () => {
         >
         <Form> 
             <br/>
-            <Field 
-                className={classes.formstyles}
-                type='text'
-                name='firstName'
-                variant='outlined'
-                placeholder='First Name'
-                label="Enter Your First Name"
-            />
-            <br/>
-        <ErrorMessage name="firstName" className='errormessage' style={{color:'red'}}/>
-
-            <br/>
-            <Field
-                className={classes.formstyles}
-                type="text"
-                name="lastName"
-                variant='outlined'
-                placeholder='Last Name'
-                label="Enter Your Last Name"
-            />
-            <br/>
-        <ErrorMessage name="lastName" className='errormessage' />
-          
             <br/>
             <Field 
                 className={classes.formstyles}
                 type="text"
                 name="email"
                 variant='outlined'
-                placeholder=' Email ID '
-                label=" Enter Your Email ID "
+                placeholder='Email ID'
+                label="Enter Your Email ID "
             />
             <br/>
-        <ErrorMessage name="email"  className='errormessage'/>
+        <ErrorMessage name="email"  className={classes.errormessage}/>
         
             <br/>
             <Field 
@@ -89,23 +66,13 @@ const SignUpop2 = () => {
                 label="Enter Your Password"
             />
             <br/>
-        <ErrorMessage name="password"  className='errormessage'/>
+        <ErrorMessage name="password"  className={classes.errormessage}/>
         <br/>
-            <Field 
-                className={classes.formstyles}
-                type="password"
-                name="resetpassword"
-                variant='outlined'
-                placeholder='Reset Password'
-                label="Enter Your Reset Password"
-            />
-            <br/>
-        <ErrorMessage name="resetpassword"  className='errormessage'/>
-        <br/>
+          
             <Button variant="contained" color="primary" type="submit">Submit</Button>
         </Form>
         </Formik>
     )
 }
 
-export default SignUpop2
+export default LoginUser;

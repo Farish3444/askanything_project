@@ -13,6 +13,8 @@ import Payment from "./Advertise/Payment";
 import CustomerReview from "./CustomerReview/CustomerReview";
 import FreeListing from "./FreeListing/FreeListing";
 import SignUpop2 from "./SignUp/SignUpop2";
+import ProtectedRoute from "./LoginUser/ProtectedRoute";
+import LoginUser from "./LoginUser/LoginUser";
 /////////////////
 
 function App() {
@@ -20,17 +22,17 @@ function App() {
     <div className="App">
     <img src={logo} className='logo'/>
     <React.Fragment>
-      <BrowserRouter>
       <NavComp />
+      <BrowserRouter>
       <Switch>
       <Route path="/Customer-Review" component={CustomerReview}/>
       <Route path="/FreeListing" component={FreeListing}/>
       <Route exact path="/Payment" component={Payment} />
-      <Route path="/SignUp" component={SignUpop}/>
+      {/* <Route path="/SignUp" component={SignUpop}/> */}
       <Route path="/SignUp2" component={SignUpop2}/>
-        <Route path="/ContactUs" component={ContactUs}/>
-        <Route  path="/Advertise"  component={Advertise}/>
-        <Route path="/" exact component={Home}/>
+      <Route path="/ContactUs" component={ContactUs}/>
+      <Route  path="/Advertise"  component={Advertise}   />
+      <Route path="/" exact component={Home}/>
       </Switch>
       </BrowserRouter>
     </React.Fragment>
